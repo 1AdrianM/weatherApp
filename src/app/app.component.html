@@ -1,0 +1,42 @@
+<div class="navbar bg-primary">
+  <div class="navbar-brand text-white">
+    <a>
+Weather Api
+    </a>
+  </div>
+</div>
+<div class="container p-4">
+  
+  <div class="row">
+    <div class="col-md-5 mt-1 ">
+      <div class="card">
+        <div class="card card-body">
+          <img src="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-512.png" width="" height="350"/>
+<form (submit)="SubmitLoc(cityName, countryCode)">
+          <input type="text" class="form-control" placeholder='City name' #cityName/>
+        <input type="text" class="form-control" placeholder='Country Code' #countryCode>
+
+        <button
+        class="btn btn-primary"
+        >
+          Buscar
+        </button>
+      </form>  
+       </div>
+      </div>
+     
+    </div>
+  </div>
+ 
+<div class="row">
+  <div class="col-md-5 mx-auto">
+    <div class="card">
+      <div class="card card-body bg-info">
+        <p>Description:{{weather.weather[0].description}}</p>
+        <p>Country:{{weather.sys.country}}</p>
+        <p>Humedad: {{weather.main.humidity}}</p>
+        <p>Temperatura: {{weather.main.temp}} &#8457;</p>
+       </div>
+    </div>
+  </div>
+</div>
